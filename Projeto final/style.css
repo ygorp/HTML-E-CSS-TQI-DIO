@@ -7,12 +7,38 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #FFFFFF;
 }
 
 /*HEADER*/
+
+.menu-navegacao {
+  position: absolute;
+  top: 0;
+  margin-top: 40px;
+}
+
+.menu-navegacao a {
+  padding: 60px;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 900;
+  min-width: 40px;
+  cursor: pointer;
+  
+}
+
+.menu-navegacao a:hover {
+  color: #0A0A0A;
+}
 
 .header-wrapper {
   height: 100vh;
@@ -50,7 +76,7 @@ h1, h2 {
   transition: 0.5s cubic-bezier(0.55, 0.25, 0.675, 0.97);
 }
 
-a:hover {
+.social-media a:hover {
   color: #0A0A0A;
   background-color: #FFFFFF;
 }
@@ -68,6 +94,10 @@ a:hover {
 }
 
 /*MENU HAMBURGUER*/
+
+.header {
+  display: none;
+}
 
 .checkbox-container {
   display: flex;
@@ -191,6 +221,19 @@ a:hover {
 #toggle:checked ~ .menu-items {
   visibility: visible;
   opacity: 1;
+}
+
+.sobre {
+  color: rgb(109, 109, 109);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  padding: 30px;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
 /*main cards*/
@@ -328,5 +371,11 @@ a:hover {
   .card:hover > .card-wrapper::before {
     height: 190px;
     width: 190px;
+  }
+  .header {
+    display: block;
+  }
+  .menu-navegacao a {
+    display: none;
   }
 }
